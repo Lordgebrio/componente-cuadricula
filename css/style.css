@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* Variables de colores */
+:root {
+  /* Colores primarios */
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+
+  /* Colores Neutrales */
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    background-color: var(--Grayish-Blue);
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  display: flex;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.card__header {
+  background-color: var(--Light-Gray);
+  padding: 20px;
+  border-radius: 5px 5px 0 0;
+}
+
+.card__title {
+  color: var(--Cyan);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.card__alert {
+  color: var(--Bright-Yellow);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 20px 0;
+}
+
+.card__description {
+  color: var(--Grayish-Blue);
+  line-height: 2rem;
+}
+
+.card__body {
+  background-color: var(--Cyan);
+  padding: 20px;
+  color: var(--Light-Gray);
+  font-weight: 700;
+}
+
+.card__price__tittle {
+  font-size: 1.5rem;
+}
+
+.card__price__value {
+  padding: 20px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+span {
+  font-size: 0.950rem;
+  font-weight: 400;
+  margin-left: 10px;
+  color: #63d4d5;
+}
+
+.card__price__text {
+  font-size: 1rem;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+
+.btn {
+  background-color: var(--Bright-Yellow);
+  border-radius: 5px;
+  border-style: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--Light-Gray);
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 20px;
+  width: 100%;
+}
+
+.card__footer {
+  background-color: #4abebd;
+  padding: 20px;
+  color: var(--Light-Gray);
+  border-radius: 0 0 5px 5px;
+}
+
+.card__footer__text {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.card__footer__list {
+  list-style: none;
+  padding-top: 20px;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  body {
+      font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+      font-size: 20px; /* Base font size for desktops */
+  }
+
+  .card{
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+  }
+
+  .card__body, .card__footer {
+    width: 50%;
+  }
+}
